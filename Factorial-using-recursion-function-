@@ -1,0 +1,27 @@
+# Factorial-using-recursion-function-
+coding:
+import java.util.Scanner;
+public class FactorialUsingRecursion {
+    public static long factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1; // Base case: factorial of 0 or 1 is 1
+        } else {
+            return n * factorial(n - 1); 
+        }
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number to calculate its factorial: ");
+        int number = scanner.nextInt();
+        if (number < 0) {    System.out.println("Factorial is not defined for negative numbers.");
+        } else {
+            long result = factorial(number);
+            System.out.println("The factorial of " + number + " is: " + result);
+        }
+        scanner.close();
+    }
+}
+
+output:
+Enter a number to calculate its factorial: 5
+The factorial of 5 is: 120
